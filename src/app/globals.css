@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-Light.ttf") format("ttf");
+  src: url("/fonts/lato-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-LightItalic.ttf") format("ttf");
+  src: url("/fonts/lato-light-italic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-Regular.ttf") format("ttf");
+  src: url("/fonts/lato-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-Italic.ttf") format("ttf");
+  src: url("/fonts/lato-italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
@@ -53,7 +53,7 @@
   --color-purple: var(--purple);
   --color-rose: var(--rose);
 
-  --font-sans: "Lato", Arial, Helvetica, sans-serif;
+  --font-sans: "Lato", "Comic Sans", Helvetica, sans-serif;
 
   --text-fluid-2xl: clamp(2.25rem, 1.6071rem + 3.2143vw, 4.5rem);
   --text-fluid-lg: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
@@ -66,11 +66,12 @@
 body {
   background: var(--white);
   color: var(--black-900);
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Comic Sans", Helvetica, sans-serif;
 }
 
 h1 {
   font-size: var(--text-fluid-2xl);
+  line-height: 1.2;
 }
 
 h2 {
