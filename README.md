@@ -1,2 +1,3 @@
-# dept-weather-planner
+# The DEPT® weather planner
+
 This is the repository for the DEPT front-end internship case.
