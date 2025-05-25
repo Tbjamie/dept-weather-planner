@@ -36,7 +36,7 @@ export default function Accordeon() {
         className="border-b border-solid border-white font-light w-max cursor-pointer hover:text-black-200 transition-colors active:duration-100 focus-visible:text-black-200"
         onClick={() => setAccordeonOpen(!accordeonOpen)}
       >
-        <span>{accordeonOpen ? "Read less" : "Read more"}</span>
+        {accordeonOpen ? "Read less" : "Read more"}
       </button>
     </div>
   );
