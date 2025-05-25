@@ -55,12 +55,14 @@
 
   --font-sans: "Lato", "Comic Sans", Helvetica, sans-serif;
 
+  --text-fluid-weather: clamp(5rem, 5.8036rem + -0.8929vw, 5.625rem);
   --text-fluid-2xl: clamp(2.25rem, 1.6071rem + 3.2143vw, 4.5rem);
   --text-fluid-lg: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
   --text-fluid-md: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
   --text-fluid-sm: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
 
   --spacing-fluid-main: clamp(1.25rem, 0.5357rem + 3.5714vw, 3.75rem);
+  --spacing-fluid-main-top: clamp(7.1875rem, 6.8304rem + 1.7857vw, 8.4375rem);
 }
 
 body {
@@ -84,6 +86,7 @@ h3 {
 
 p {
   font-size: var(--text-fluid-md);
+  line-height: 1.875;
 }
 
 a {
