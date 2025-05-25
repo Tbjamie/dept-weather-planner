@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "The DEPT® weather planner",
@@ -14,7 +16,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="px-fluid-main absolute pt-5 lg:pt-[1.875rem] z-50">
+          <Link href="/">
+            <Image
+              className="invert"
+              aria-hidden
+              src="/icons/dept-logo.svg"
+              alt="DEPT® logo"
+              width={88}
+              height={25}
+            />
+          </Link>
+        </header>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
