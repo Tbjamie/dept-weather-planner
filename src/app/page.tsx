@@ -74,10 +74,6 @@ export default async function Home() {
     );
   });
 
-  console.log("Activities:", activities);
-  console.log("Relevant Activities:", relevantActivities);
-  console.log("Irrelevant Activities:", irrelevantActivities);
-
   const relevantActivityCards = relevantActivities.map((activity) => {
     return (
       <ActivityCard
@@ -146,10 +142,14 @@ export default async function Home() {
           </section>
         ) : null}
 
-        <h2 className="mt-[1.875rem] mb-2.5">Some things you should not do:</h2>
-        <div className="flex flex-col gap-[1.875rem]">
-          {irrelevantActivityCards}
-        </div>
+        {irrelevantActivities.length > 0 ? (
+          <section className="mt-[1.875rem]">
+            <h2 className="mb-2.5">Some things you should not do:</h2>
+            <div className="flex flex-col gap-[1.875rem]">
+              {irrelevantActivityCards}
+            </div>
+          </section>
+        ) : null}
       </section>
     </div>
   );

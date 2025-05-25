@@ -27,7 +27,9 @@ export default function ActivityCard({
 
       <div className="pb-5 lg:pb-6 border-b border-solid border-black-100">
         {title ? (
-          <h3 className="!text-fluid-activity mb-1 lg:mb-0">{title}</h3>
+          <h3 className="!text-fluid-activity mb-1 lg:mb-0 leading-tight">
+            {title}
+          </h3>
         ) : null}
 
         {description ? <p className="font-light">{description}</p> : null}

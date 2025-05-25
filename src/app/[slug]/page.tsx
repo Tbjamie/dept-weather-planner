@@ -25,9 +25,6 @@ export default async function Page({
 
   const { activities } = activityData;
 
-  console.log("activities", activities);
-  console.log("slug", slug);
-
   const currentActivity = activities.find((activity: ActivityType) =>
     activity.url.includes(slug)
   );
