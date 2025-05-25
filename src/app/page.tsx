@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import Input from "../components/Input";
 import WeatherCard from "../components/WeatherCard";
 
-interface WeatherCard {
+interface WeatherType {
   temperature: {
     temp: number;
     metric: string;
@@ -17,7 +17,7 @@ interface WeatherCard {
   }[];
 }
 
-interface ActivityCard {
+interface ActivityType {
   activities: {
     title: string;
     imageUrl: string;
@@ -37,7 +37,7 @@ export default async function Home() {
     throw new Error("Weather fetch failed");
   }
 
-  const weatherData: WeatherCard = await weatherFetch.json();
+  const weatherData: WeatherType = await weatherFetch.json();
 
   const { temperature, weatherInfo } = weatherData;
 
@@ -55,7 +55,7 @@ export default async function Home() {
     throw new Error("Activity fetch failed");
   }
 
-  const activityData: ActivityCard = await activityFetch.json();
+  const activityData: ActivityType = await activityFetch.json();
 
   const { activities } = activityData;
 
@@ -137,10 +137,14 @@ export default async function Home() {
           description={currentWeather.description}
         />
 
-        <h2 className="mt-[1.875rem] mb-2.5">Some things you could do:</h2>
-        <div className="flex flex-col gap-[1.875rem]">
-          {relevantActivityCards}
-        </div>
+        {relevantActivityCards.length > 0 ? (
+          <section>
+            <h2 className="mt-[1.875rem] mb-2.5">Some things you could do:</h2>
+            <div className="flex flex-col gap-[1.875rem]">
+              {relevantActivityCards}
+            </div>
+          </section>
+        ) : null}
 
         <h2 className="mt-[1.875rem] mb-2.5">Some things you should not do:</h2>
         <div className="flex flex-col gap-[1.875rem]">
